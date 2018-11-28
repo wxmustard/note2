@@ -63,35 +63,35 @@ pip install bpython
 ### `Django`基本命令
 
 - ```bash
-  # 创建新项目 mysite
-  django-admin startproject mysite
-  # 创建新应用（app），learn
-  python manage.py startapp learn
-  # 将新定义的app加到settings.py中的INSTALL_APPS中
-  # 修改mysite/mysite/settings.py
-  INSTALLED_APPS = (
-      'django.contrib.admin',
-      'django.contrib.auth',
-      'django.contrib.contenttypes',
-      'django.contrib.sessions',
-      'django.contrib.messages',
-      'django.contrib.staticfiles',
-   
-      'learn',
-  )
-  # 新建的 app 如果不加到 INSTALL_APPS 中的话, django 就不能自动找到app中的模板文件(app-name/templates/下的文件)和静态文件(app-name/static/中的文件)
-  ```
+# 创建新项目 mysite
+django-admin startproject mysite
+# 创建新应用（app），learn
+python manage.py startapp learn
+# 将新定义的app加到settings.py中的INSTALL_APPS中
+# 修改mysite/mysite/settings.py
+INSTALLED_APPS = (
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+
+    'learn',
+)
+# 新建的 app 如果不加到 INSTALL_APPS 中的话, django 就不能自动找到app中的模板文件(app-name/templates/下的文件)和静态文件(app-name/static/中的文件)
+```
 
 - `requirements.txt`
 
   > python项目中必须包含一个 requirements.txt 文件，用于记录所有依赖包及其精确的版本号。以便新环境部署。
 
-  ```bash
-  # 生成requirements.txt
-  pip3 freeze >requirements.txt
-  # 部署环境
-  pip3 install -r requirements.txt
-  ```
+```bash
+# 生成requirements.txt
+pip3 freeze >requirements.txt
+# 部署环境
+pip3 install -r requirements.txt
+```
 
 
 
@@ -110,38 +110,38 @@ pip3 install pygments
 
   - 将app添加至项目中
 
-  ```python
-  # 将'vm.apps.VmConfig'添加到kvm/settings.py中
-  INSTALLED_APPS = [
-      'vm.apps.VmConfig',
-  ]
-  ```
+```python
+# 将'vm.apps.VmConfig'添加到kvm/settings.py中
+INSTALLED_APPS = [
+    'vm.apps.VmConfig',
+]
+```
 
-  - 修改项目的url
+- 修改项目的url
 
-  ```python
-  # 打开kvm/urls.py,将以下语句添加进去
-  # 提示：vm/urls.py需要自行创建
-  from django.conf.urls import url , include
-  urlpatterns = [
-      path('admin/', admin.site.urls),
-      url(r'^',include('vm.urls'))
-  ]
-  ```
+```python
+# 打开kvm/urls.py,将以下语句添加进去
+# 提示：vm/urls.py需要自行创建
+from django.conf.urls import url , include
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    url(r'^',include('vm.urls'))
+]
+```
 
   - 创建`vm/urls.py`
 
-  ```python
-  # url是预先设计好的
-  from django.conf.urls import url
-  from vm import views
-  from rest_framework.urlpatterns import format_suffix_patterns
-  urlpatterns = [
-      url(r'^v1/vps/$',views.kvm_list),
-      url(r'^v1/vps/kvmname/(?P<name>[a-zA-Z0-9]+)/$',views.kvm),
-  ]
-  urlpatterns = format_suffix_patterns(urlpatterns)
-  ```
+```python
+# url是预先设计好的
+from django.conf.urls import url
+from vm import views
+from rest_framework.urlpatterns import format_suffix_patterns
+urlpatterns = [
+    url(r'^v1/vps/$',views.kvm_list),
+    url(r'^v1/vps/kvmname/(?P<name>[a-zA-Z0-9]+)/$',views.kvm),
+]
+urlpatterns = format_suffix_patterns(urlpatterns)
+```
 
 ### 数据库操作
 
