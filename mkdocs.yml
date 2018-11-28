@@ -8,4 +8,16 @@ nav:
         - 'help':
                 - '快速开始': 'help/start.md'
         - 'python notes':
+                - '编程简介': 'python/Chapter1.md'
+                - '算术、字符串与变量': 'python/Chapter2.md'
+                - '编写程序': 'python/Chapter3.md'
+                - '流程控制': 'python/Chapter4.md'
+                - '函数': 'python/Chapter5.md'
+                - '字符串': 'python/Chapter6.md'
                 - '数据结构': 'python/Chapter7.md'
+                - '输入和输出': 'python/Chapter8.md'
+                - '异常处理': 'python/Chapter9.md'
+                - '面向对象编程': 'python/Chapter10.md'
+                - 'Python-web:Flask': 'python/Flask.md'
+                - 'Python-web:Django': 'python/Django.md'
+                - 'Q&A': 'python/Q&A.md'
