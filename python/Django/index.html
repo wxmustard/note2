@@ -144,11 +144,6 @@
         <li class="main active"><a href="#-django">企业级开发框架-Django</a></li>
             <li><a href="#_1">开发环境</a></li>
             <li><a href="#django">Django</a></li>
-        <li class="main "><a href="#mysite">创建新项目 mysite</a></li>
-        <li class="main "><a href="#applearn">创建新应用（app），learn</a></li>
-        <li class="main "><a href="#appsettingspyinstall_apps">将新定义的app加到settings.py中的INSTALL_APPS中</a></li>
-        <li class="main "><a href="#mysitemysitesettingspy">修改mysite/mysite/settings.py</a></li>
-        <li class="main "><a href="#app-install_apps-django-appapp-nametemplatesapp-namestatic">新建的 app 如果不加到 INSTALL_APPS 中的话, django 就不能自动找到app中的模板文件(app-name/templates/下的文件)和静态文件(app-name/static/中的文件)</a></li>
             <li><a href="#django-rest-framework">使用Django Rest framework框架</a></li>
             <li><a href="#qa">Q&amp;A</a></li>
     </ul>
@@ -213,33 +208,32 @@ pip install bpython
 </code></pre>
 
 <h3 id="django_1"><code>Django</code>基本命令</h3>
-<ul>
-<li>```bash</li>
-</ul>
-<h1 id="mysite">创建新项目 mysite</h1>
-<p>django-admin startproject mysite</p>
-<h1 id="applearn">创建新应用（app），learn</h1>
-<p>python manage.py startapp learn</p>
-<h1 id="appsettingspyinstall_apps">将新定义的app加到settings.py中的INSTALL_APPS中</h1>
-<h1 id="mysitemysitesettingspy">修改mysite/mysite/settings.py</h1>
-<p>INSTALLED_APPS = (
+<pre><code class="bash"># 创建新项目 mysite
+django-admin startproject mysite
+# 创建新应用（app），learn
+python manage.py startapp learn
+# 将新定义的app加到settings.py中的INSTALL_APPS中
+# 修改mysite/mysite/settings.py
+INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',</p>
-<pre><code>'learn',
+    'django.contrib.staticfiles',
+
+    'learn',
+)
+# 新建的 app 如果不加到 INSTALL_APPS 中的话, django 就不能自动找到app中的模板文件(app-name/templates/下的文件)和静态文件(app-name/static/中的文件)
 </code></pre>
-<p>)</p>
-<h1 id="app-install_apps-django-appapp-nametemplatesapp-namestatic">新建的 app 如果不加到 INSTALL_APPS 中的话, django 就不能自动找到app中的模板文件(app-name/templates/下的文件)和静态文件(app-name/static/中的文件)</h1>
-<pre><code>
-- `requirements.txt`
 
-  &gt; python项目中必须包含一个 requirements.txt 文件，用于记录所有依赖包及其精确的版本号。以便新环境部署。
-
-```bash
-# 生成requirements.txt
+<ul>
+<li><code>requirements.txt</code></li>
+</ul>
+<blockquote>
+<p>python项目中必须包含一个 requirements.txt 文件，用于记录所有依赖包及其精确的版本号。以便新环境部署。</p>
+</blockquote>
+<pre><code class="bash"># 生成requirements.txt
 pip3 freeze &gt;requirements.txt
 # 部署环境
 pip3 install -r requirements.txt
