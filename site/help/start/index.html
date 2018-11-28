@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>数据结构 - Mustard's docs</title>
+        <title>mkdocs + github - Mustard's docs</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -48,21 +48,21 @@
                     <li >
                         <a href="../..">Welcome to MkDocs</a>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
-<li >
-    <a href="../../help/start/">mkdocs + github</a>
+<li class="active">
+    <a href="./">mkdocs + github</a>
 </li>
                         </ul>
                     </li>
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
-<li class="active">
-    <a href="./">数据结构</a>
+<li >
+    <a href="../../python/Chapter7/">Chapter7</a>
 </li>
                         </ul>
                     </li>
@@ -75,17 +75,17 @@
                     </a>
                 </li>
                     <li >
-                        <a rel="next" href="../../help/start/">
+                        <a rel="next" href="../..">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li class="disabled">
-                        <a rel="prev" >
+                    <li >
+                        <a rel="prev" href="../../python/Chapter7/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/wxmustard/note2/edit/master/docs/python/Chapter7.md">Edit on Mustard's github</a>
+                        <a href="https://github.com/wxmustard/note2/edit/master/docs/help/start.md">Edit on Mustard's github</a>
                     </li>
             </ul>
         </div>
@@ -95,78 +95,89 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#_1">数据结构</a></li>
-            <li><a href="#_2">列表</a></li>
-            <li><a href="#_3">字典</a></li>
+        <li class="main active"><a href="#mkdocs-github">mkdocs + github</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="_1">数据结构</h1>
-<h2 id="_2">列表</h2>
+<h1 id="mkdocs-github">mkdocs + github</h1>
 <ul>
-<li>列表是可变的（添加、修改、删除列表元素），使用<code>[]</code>括起，使用<code>,</code>分隔。如<code>data=[1,2,3,4,5]</code></li>
+<li>安装mkdocs<blockquote>
+<p>首先安装Python</p>
+</blockquote>
+</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th align="center">函数</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">s.append(x)</td>
-<td align="center">在列表s的末尾添加元素x</td>
-</tr>
-<tr>
-<td align="center">s.pop(i)</td>
-<td align="center">删除并返回s中索引为i的元素</td>
-</tr>
-<tr>
-<td align="center">s.remove(x)</td>
-<td align="center">删除s中的第一个x元素</td>
-</tr>
-</tbody>
-</table>
-<h2 id="_3">字典</h2>
-<ul>
-<li>用于存储键值对，效率极高,可以添加、删除、修改键值对。如<code>color={'red':1,'blue':2}</code></li>
-<li>字典中的键是独一无二的，即使在同一个字典里，也不允许任何两个键值对相同</li>
-</ul>
-<pre><code class="python"># 遍历字典的key&amp;value
-out = []
-for key in data.keys():
-    str1 = key + &quot;=&quot; + data[key]
-    out.append(str1)
-print('&amp;'.join(out))
-out1 = []
-for key,value in data.items():
-#for (key,value) in data.items():
-    str2 = key + &quot;=&quot; + value
-    out1.append(str2)
-print('&amp;'.join(out1))
-# 遍历字典的value
-for value in data.values():
-    print(value)
+<pre><code class="bash">sudo pip install mkdocs
 </code></pre>
 
-<h3 id="_4">在字典中嵌套列表</h3>
-<pre><code class="python">import json
-data = {'kvmlist':[{'name':'vm01','status':'0'}]}
-print(data)
-data1 = {'name':'vm02','status':'1'}
-list1 = data['kvmlist']
-list1.append(data1)
-data['kvmlist']=list1
-print(data)
-json = json.dumps(data)
-print(json)
+<ul>
+<li>配置github 仓库<blockquote>
+<p>在github上创建仓库，note2</p>
+</blockquote>
+</li>
+</ul>
+<pre><code class="bash">git clone git@github.com:wxmustard/note2.git
 </code></pre>
 
-<pre><code class="python">{'kvmlist': [{'name': 'vm01', 'status': '0'}]}
-{'kvmlist': [{'name': 'vm01', 'status': '0'}, {'name': 'vm02', 'status': '1'}]}
-{&quot;kvmlist&quot;: [{&quot;name&quot;: &quot;vm01&quot;, &quot;status&quot;: &quot;0&quot;}, {&quot;name&quot;: &quot;vm02&quot;, &quot;status&quot;: &quot;1&quot;}]}
+<ul>
+<li>设置mkdocs项目</li>
+</ul>
+<pre><code class="bash">cd note2
+mkdocs new .
+# 自动生成 docs（文档主目录）  mkdocs.yml（配置文件）
+</code></pre>
+
+<ul>
+<li>创建笔记md文件</li>
+</ul>
+<pre><code class="bash"># docs
+#├── help
+#│   └── start.md
+#├── index.md
+#└── python
+#    └── Chapter7.md
+</code></pre>
+
+<ul>
+<li>建立索引</li>
+</ul>
+<pre><code class="bash">vim mkdocs.yml
+site_name: Mustard's docs
+theme:
+    name: 'material'
+nav:
+    - 'help':
+        - '快速开始': 'help/start.md'
+    - 'python notes':
+        - '数据结构': 'python/Chapter7.md'
+
+- 本地浏览（/调试）
+​```bash
+mkdocs serve
+# 打开浏览器输入http://127.0.0.1:8000
+</code></pre>
+
+<ul>
+<li>发布</li>
+</ul>
+<pre><code class="bash">mkdocs gh-deploy --clean
+#　--clean　清理不存在的文件
+</code></pre>
+
+<ul>
+<li>更新远程仓库并浏览docs文档<blockquote>
+<p>push.sh    </p>
+<p>!/bin/bash</p>
+<p>git status
+git add -A
+git commit -m  $1
+git push origin master</p>
+</blockquote>
+</li>
+</ul>
+<pre><code class="bash">./push docs
+# 访问：　https://wxmustard.github.io/note2/
+# https://（github用户名）.github.io/（远程仓库名）/
 </code></pre></div>
         </div>
 
