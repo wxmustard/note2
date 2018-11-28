@@ -10,54 +10,54 @@
 
 - 安装`virtualenv`
 
-  ```bash
-  sudo pip install virtualenv virtualenvwrapper
-  ```
+```bash
+sudo pip install virtualenv virtualenvwrapper
+```
 
 - 更改`.zshrc`
 
-  ```bash
-  export WORKON_HOME=/home/mustard/.virtualenvs
-  export PROJECT_HOME=/home/mustard/workspace
-  export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
-  source /usr/local/bin/virtualenvwrapper.sh
-  # 使更改生效
-  source .zshrc
-  ```
+```bash
+export WORKON_HOME=/home/mustard/.virtualenvs
+export PROJECT_HOME=/home/mustard/workspace
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+source /usr/local/bin/virtualenvwrapper.sh
+# 使更改生效
+source .zshrc
+```
 
 - 创建一个新的项目
 
-  ```bash
-  # 创建项目目录
-  mkdir myproject
-  cd myproject/
-  # 创建一个独立的Python运行环境，命名为venv
-  virtualenv --no-site-packages venv
-  # virtualenv命令是创建一个独立的Python运行环境
-  # --no-site-packages参数是创建一个干净的不包含第三方包的Python运行环境
-  
-  #进入venv环境
-  source venv/bin/activate
-  # 此时可以使用pip install等命令了
-  ```
+```bash
+# 创建项目目录
+mkdir myproject
+cd myproject/
+# 创建一个独立的Python运行环境，命名为venv
+virtualenv --no-site-packages venv
+# virtualenv命令是创建一个独立的Python运行环境
+# --no-site-packages参数是创建一个干净的不包含第三方包的Python运行环境
+
+#进入venv环境
+source venv/bin/activate
+# 此时可以使用pip install等命令了
+```
 
 ## Django
 
 - 安装`bpython`，添加自动补全功能
 
-  ```python
-  # 进入venv环境后
-  # 1.升级pip
-  pip install --upgrade pip
-  # 2.安装Django
-  pip install Django
-  # 3.安装bpython
-  pip install bpython
-  # 进入bpython，查询django版本
-  >>> import django
-  >>> django.VERSION
-  (1, 11, 7, 'final', 0)
-  ```
+```python
+# 进入venv环境后
+# 1.升级pip
+pip install --upgrade pip
+# 2.安装Django
+pip install Django
+# 3.安装bpython
+pip install bpython
+# 进入bpython，查询django版本
+>>> import django
+>>> django.VERSION
+(1, 11, 7, 'final', 0)
+```
 
 
 ### `Django`基本命令
