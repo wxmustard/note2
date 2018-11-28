@@ -1,0 +1,49 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "title": "Welcome to MkDocs"
+        }, 
+        {
+            "location": "/#welcome-to-mkdocs", 
+            "text": "For full documentation visit  mkdocs.org .", 
+            "title": "Welcome to MkDocs"
+        }, 
+        {
+            "location": "/#commands", 
+            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
+            "title": "Commands"
+        }, 
+        {
+            "location": "/#project-layout", 
+            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "title": "Project layout"
+        }, 
+        {
+            "location": "/python/Chapter7/", 
+            "text": "\u6570\u636e\u7ed3\u6784\n\n\n\u5217\u8868\n\n\n\n\n\u5217\u8868\u662f\u53ef\u53d8\u7684\uff08\u6dfb\u52a0\u3001\u4fee\u6539\u3001\u5220\u9664\u5217\u8868\u5143\u7d20\uff09\uff0c\u4f7f\u7528\n[]\n\u62ec\u8d77\uff0c\u4f7f\u7528\n,\n\u5206\u9694\u3002\u5982\ndata=[1,2,3,4,5]\n\n\n\n\n\n\n\n\n\n\n\u51fd\u6570\n\n\n\u8bf4\u660e\n\n\n\n\n\n\n\n\n\n\ns.append(x)\n\n\n\u5728\u5217\u8868s\u7684\u672b\u5c3e\u6dfb\u52a0\u5143\u7d20x\n\n\n\n\n\n\ns.pop(i)\n\n\n\u5220\u9664\u5e76\u8fd4\u56des\u4e2d\u7d22\u5f15\u4e3ai\u7684\u5143\u7d20\n\n\n\n\n\n\ns.remove(x)\n\n\n\u5220\u9664s\u4e2d\u7684\u7b2c\u4e00\u4e2ax\u5143\u7d20\n\n\n\n\n\n\n\n\n\u5b57\u5178\n\n\n\n\n\u7528\u4e8e\u5b58\u50a8\u952e\u503c\u5bf9\uff0c\u6548\u7387\u6781\u9ad8,\u53ef\u4ee5\u6dfb\u52a0\u3001\u5220\u9664\u3001\u4fee\u6539\u952e\u503c\u5bf9\u3002\u5982\ncolor={'red':1,'blue':2}\n\n\n\u5b57\u5178\u4e2d\u7684\u952e\u662f\u72ec\u4e00\u65e0\u4e8c\u7684\uff0c\u5373\u4f7f\u5728\u540c\u4e00\u4e2a\u5b57\u5178\u91cc\uff0c\u4e5f\u4e0d\u5141\u8bb8\u4efb\u4f55\u4e24\u4e2a\u952e\u503c\u5bf9\u76f8\u540c\n\n\n\n\n# \u904d\u5386\u5b57\u5178\u7684key\nvalue\nout = []\nfor key in data.keys():\n    str1 = key + \n=\n + data[key]\n    out.append(str1)\nprint('\n'.join(out))\nout1 = []\nfor key,value in data.items():\n#for (key,value) in data.items():\n    str2 = key + \n=\n + value\n    out1.append(str2)\nprint('\n'.join(out1))\n# \u904d\u5386\u5b57\u5178\u7684value\nfor value in data.values():\n    print(value)\n\n\n\n\n\u5728\u5b57\u5178\u4e2d\u5d4c\u5957\u5217\u8868\n\n\nimport json\ndata = {'kvmlist':[{'name':'vm01','status':'0'}]}\nprint(data)\ndata1 = {'name':'vm02','status':'1'}\nlist1 = data['kvmlist']\nlist1.append(data1)\ndata['kvmlist']=list1\nprint(data)\njson = json.dumps(data)\nprint(json)\n\n\n\n\n{'kvmlist': [{'name': 'vm01', 'status': '0'}]}\n{'kvmlist': [{'name': 'vm01', 'status': '0'}, {'name': 'vm02', 'status': '1'}]}\n{\nkvmlist\n: [{\nname\n: \nvm01\n, \nstatus\n: \n0\n}, {\nname\n: \nvm02\n, \nstatus\n: \n1\n}]}", 
+            "title": "\u6570\u636e\u7ed3\u6784"
+        }, 
+        {
+            "location": "/python/Chapter7/#_1", 
+            "text": "", 
+            "title": "\u6570\u636e\u7ed3\u6784"
+        }, 
+        {
+            "location": "/python/Chapter7/#_2", 
+            "text": "\u5217\u8868\u662f\u53ef\u53d8\u7684\uff08\u6dfb\u52a0\u3001\u4fee\u6539\u3001\u5220\u9664\u5217\u8868\u5143\u7d20\uff09\uff0c\u4f7f\u7528 [] \u62ec\u8d77\uff0c\u4f7f\u7528 , \u5206\u9694\u3002\u5982 data=[1,2,3,4,5]      \u51fd\u6570  \u8bf4\u660e      s.append(x)  \u5728\u5217\u8868s\u7684\u672b\u5c3e\u6dfb\u52a0\u5143\u7d20x    s.pop(i)  \u5220\u9664\u5e76\u8fd4\u56des\u4e2d\u7d22\u5f15\u4e3ai\u7684\u5143\u7d20    s.remove(x)  \u5220\u9664s\u4e2d\u7684\u7b2c\u4e00\u4e2ax\u5143\u7d20", 
+            "title": "\u5217\u8868"
+        }, 
+        {
+            "location": "/python/Chapter7/#_3", 
+            "text": "\u7528\u4e8e\u5b58\u50a8\u952e\u503c\u5bf9\uff0c\u6548\u7387\u6781\u9ad8,\u53ef\u4ee5\u6dfb\u52a0\u3001\u5220\u9664\u3001\u4fee\u6539\u952e\u503c\u5bf9\u3002\u5982 color={'red':1,'blue':2}  \u5b57\u5178\u4e2d\u7684\u952e\u662f\u72ec\u4e00\u65e0\u4e8c\u7684\uff0c\u5373\u4f7f\u5728\u540c\u4e00\u4e2a\u5b57\u5178\u91cc\uff0c\u4e5f\u4e0d\u5141\u8bb8\u4efb\u4f55\u4e24\u4e2a\u952e\u503c\u5bf9\u76f8\u540c   # \u904d\u5386\u5b57\u5178\u7684key value\nout = []\nfor key in data.keys():\n    str1 = key +  =  + data[key]\n    out.append(str1)\nprint(' '.join(out))\nout1 = []\nfor key,value in data.items():\n#for (key,value) in data.items():\n    str2 = key +  =  + value\n    out1.append(str2)\nprint(' '.join(out1))\n# \u904d\u5386\u5b57\u5178\u7684value\nfor value in data.values():\n    print(value)", 
+            "title": "\u5b57\u5178"
+        }, 
+        {
+            "location": "/python/Chapter7/#_4", 
+            "text": "import json\ndata = {'kvmlist':[{'name':'vm01','status':'0'}]}\nprint(data)\ndata1 = {'name':'vm02','status':'1'}\nlist1 = data['kvmlist']\nlist1.append(data1)\ndata['kvmlist']=list1\nprint(data)\njson = json.dumps(data)\nprint(json)  {'kvmlist': [{'name': 'vm01', 'status': '0'}]}\n{'kvmlist': [{'name': 'vm01', 'status': '0'}, {'name': 'vm02', 'status': '1'}]}\n{ kvmlist : [{ name :  vm01 ,  status :  0 }, { name :  vm02 ,  status :  1 }]}", 
+            "title": "\u5728\u5b57\u5178\u4e2d\u5d4c\u5957\u5217\u8868"
+        }
+    ]
+}

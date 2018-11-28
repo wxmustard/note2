@@ -1,4 +1,5 @@
 site_name: My Docs
+theme: readthedocs
 nav:
         - 'python notes':
                 - '数据结构': 'python/Chapter7.md'

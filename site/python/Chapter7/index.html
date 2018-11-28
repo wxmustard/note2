@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>数据结构 - My Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u6570\u636e\u7ed3\u6784";
+    var mkdocs_page_input_path = "python/Chapter7.md";
+    var mkdocs_page_url = "/python/Chapter7/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> My Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Welcome to MkDocs</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Python</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">数据结构</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#_1">数据结构</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#_2">列表</a></li>
+        
+            <li><a class="toctree-l4" href="#_3">字典</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">My Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Python &raquo;</li>
+        
+      
+    
+    <li>数据结构</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="_1">数据结构</h1>
+<h2 id="_2">列表</h2>
+<ul>
+<li>列表是可变的（添加、修改、删除列表元素），使用<code>[]</code>括起，使用<code>,</code>分隔。如<code>data=[1,2,3,4,5]</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">s.append(x)</td>
+<td align="center">在列表s的末尾添加元素x</td>
+</tr>
+<tr>
+<td align="center">s.pop(i)</td>
+<td align="center">删除并返回s中索引为i的元素</td>
+</tr>
+<tr>
+<td align="center">s.remove(x)</td>
+<td align="center">删除s中的第一个x元素</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">字典</h2>
+<ul>
+<li>用于存储键值对，效率极高,可以添加、删除、修改键值对。如<code>color={'red':1,'blue':2}</code></li>
+<li>字典中的键是独一无二的，即使在同一个字典里，也不允许任何两个键值对相同</li>
+</ul>
+<pre><code class="python"># 遍历字典的key&amp;value
+out = []
+for key in data.keys():
+    str1 = key + &quot;=&quot; + data[key]
+    out.append(str1)
+print('&amp;'.join(out))
+out1 = []
+for key,value in data.items():
+#for (key,value) in data.items():
+    str2 = key + &quot;=&quot; + value
+    out1.append(str2)
+print('&amp;'.join(out1))
+# 遍历字典的value
+for value in data.values():
+    print(value)
+</code></pre>
+
+<h3 id="_4">在字典中嵌套列表</h3>
+<pre><code class="python">import json
+data = {'kvmlist':[{'name':'vm01','status':'0'}]}
+print(data)
+data1 = {'name':'vm02','status':'1'}
+list1 = data['kvmlist']
+list1.append(data1)
+data['kvmlist']=list1
+print(data)
+json = json.dumps(data)
+print(json)
+</code></pre>
+
+<pre><code class="python">{'kvmlist': [{'name': 'vm01', 'status': '0'}]}
+{'kvmlist': [{'name': 'vm01', 'status': '0'}, {'name': 'vm02', 'status': '1'}]}
+{&quot;kvmlist&quot;: [{&quot;name&quot;: &quot;vm01&quot;, &quot;status&quot;: &quot;0&quot;}, {&quot;name&quot;: &quot;vm02&quot;, &quot;status&quot;: &quot;1&quot;}]}
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../.." class="btn btn-neutral" title="Welcome to MkDocs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
+
+</body>
+</html>
