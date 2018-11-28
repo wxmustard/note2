@@ -3,8 +3,9 @@ repo_name: Mustard's github
 repo_url: https://github.com/wxmustard/note2
 theme:
         name: bootstrap
+
 nav:
         - 'help':
-                - '快熟开始': 'help/start.md'
+                - '快速开始': 'help/start.md'
         - 'python notes':
                 - '数据结构': 'python/Chapter7.md'
