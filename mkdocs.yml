@@ -1,7 +1,8 @@
 site_name: Mustard's docs
 repo_name: Mustard's github
 repo_url: https://github.com/wxmustard/note2
-theme: material
+theme:
+        name: bootstrap
 nav:
         - 'help':
                 - '快熟开始': 'help/start.md'
