@@ -61,7 +61,6 @@ pip install bpython
 
 
 ### `Django`基本命令
-
 ```bash
 # 创建新项目 mysite
 django-admin startproject mysite
@@ -84,7 +83,7 @@ INSTALLED_APPS = (
 
 - `requirements.txt`
 
-  > python项目中必须包含一个 requirements.txt 文件，用于记录所有依赖包及其精确的版本号。以便新环境部署。
+> python项目中必须包含一个 requirements.txt 文件，用于记录所有依赖包及其精确的版本号。以便新环境部署。
 
 ```bash
 # 生成requirements.txt
