@@ -1,0 +1,4 @@
+site_name: My Docs
+nav:
+        - 'python notes':
+                - '数据结构': 'python/Chapter7.md'
