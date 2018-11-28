@@ -62,7 +62,7 @@ pip install bpython
 
 ### `Django`基本命令
 
-- ```bash
+```bash
 # 创建新项目 mysite
 django-admin startproject mysite
 # 创建新应用（app），learn
@@ -117,7 +117,7 @@ INSTALLED_APPS = [
 ]
 ```
 
-- 修改项目的url
+  - 修改项目的url
 
 ```python
 # 打开kvm/urls.py,将以下语句添加进去
