@@ -160,56 +160,53 @@
 <ul>
 <li>安装<code>virtualenv</code></li>
 </ul>
-<p><code>bash
-  sudo pip install virtualenv virtualenvwrapper</code></p>
+<pre><code class="bash">sudo pip install virtualenv virtualenvwrapper
+</code></pre>
+
 <ul>
 <li>更改<code>.zshrc</code></li>
 </ul>
-<p><code>bash
-  export WORKON_HOME=/home/mustard/.virtualenvs
-  export PROJECT_HOME=/home/mustard/workspace
-  export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
-  source /usr/local/bin/virtualenvwrapper.sh
-  # 使更改生效
-  source .zshrc</code></p>
+<pre><code class="bash">export WORKON_HOME=/home/mustard/.virtualenvs
+export PROJECT_HOME=/home/mustard/workspace
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+source /usr/local/bin/virtualenvwrapper.sh
+# 使更改生效
+source .zshrc
+</code></pre>
+
 <ul>
 <li>创建一个新的项目</li>
 </ul>
-<p>```bash
-  # 创建项目目录
-  mkdir myproject
-  cd myproject/
-  # 创建一个独立的Python运行环境，命名为venv
-  virtualenv --no-site-packages venv
-  # virtualenv命令是创建一个独立的Python运行环境
-  # --no-site-packages参数是创建一个干净的不包含第三方包的Python运行环境</p>
-<p>#进入venv环境
-  source venv/bin/activate
-  # 此时可以使用pip install等命令了
-  ```</p>
+<pre><code class="bash"># 创建项目目录
+mkdir myproject
+cd myproject/
+# 创建一个独立的Python运行环境，命名为venv
+virtualenv --no-site-packages venv
+# virtualenv命令是创建一个独立的Python运行环境
+# --no-site-packages参数是创建一个干净的不包含第三方包的Python运行环境
+
+#进入venv环境
+source venv/bin/activate
+# 此时可以使用pip install等命令了
+</code></pre>
+
 <h2 id="django">Django</h2>
 <ul>
 <li>安装<code>bpython</code>，添加自动补全功能</li>
 </ul>
-<p>```python
-  # 进入venv环境后
-  # 1.升级pip
-  pip install --upgrade pip
-  # 2.安装Django
-  pip install Django
-  # 3.安装bpython
-  pip install bpython
-  # 进入bpython，查询django版本</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>import django
-django.VERSION
-  (1, 11, 7, 'final', 0)
-  ```</p>
-</blockquote>
-</blockquote>
-</blockquote>
+<pre><code class="python"># 进入venv环境后
+# 1.升级pip
+pip install --upgrade pip
+# 2.安装Django
+pip install Django
+# 3.安装bpython
+pip install bpython
+# 进入bpython，查询django版本
+&gt;&gt;&gt; import django
+&gt;&gt;&gt; django.VERSION
+(1, 11, 7, 'final', 0)
+</code></pre>
+
 <h3 id="django_1"><code>Django</code>基本命令</h3>
 <ul>
 <li>
