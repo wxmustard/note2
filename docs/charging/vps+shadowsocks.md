@@ -3,7 +3,7 @@
 vps 提供商
 
 [digitalocean](https://cloud.digitalocean.com/account/billing?i=49f6a3)
-
+![vps-ss](https://s1.ax1x.com/2018/12/18/FB8TO0.png)
 ```bash
 ssh root@vpsip
 apt-get -y install python-gevent python-pip
