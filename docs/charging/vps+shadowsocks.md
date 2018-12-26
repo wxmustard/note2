@@ -34,13 +34,20 @@ cat /var/log/shadowsocks.log
 [下载shadowdocks客户端](https://sourceforge.net/projects/shadowsocksgui/)
 
 ### Ubuntu
-
+#### 通过apt 安装
 ```bash
 sudo add-apt-repository ppa:hzwhuang/ss-qt5
 sudo apt-get update
 sudo apt-get install shadowsocks-qt5
 ```
 
+#### 通过github安装
+[github 地址](https://github.com/shadowsocks/shadowsocks-qt5/releases)
+> 下载.appImage
+>  chmod a+x Shadowsocks-Qt5-3.0.0-x86_64.AppImage
+>  nohup ./Shadowsocks-Qt5-3.0.0-x86_64.AppImage & (后台执行)
+
+#### 代理
 > 连接后无法使用google访问外网，原因是google默认使用系统连接，需要设置代理
 >
 > - google可以使用插件SwitchyOmega
