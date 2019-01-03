@@ -49,7 +49,7 @@ sudo apt-get install shadowsocks-qt5
 >
 > - auto switch : 删除第一行直接连接
 >
-> - 规则列表：https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
+> - 规则列表：https://github.com/wxmustard/note2/blob/master/docs/charging/gfwlist.txt
 >
 > - 保存 
 
